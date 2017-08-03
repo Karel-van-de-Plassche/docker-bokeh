@@ -6,7 +6,7 @@ MAINTAINER Karel van de Plassche <karelvandeplassche@gmail.com>
 #  && /container/tool/add-service-available :nginx \
 RUN apt-get update \
   && LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes --no-install-recommends \
-    vim \
+#    vim \
 #    git \
 #    build-essential \
     libyaml-dev \
@@ -22,9 +22,8 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN ln -s /usr/bin/pip3 /usr/bin/pip
-# Need to downgrade tornado for known compatibility issues
+
 RUN pip install \
-  'tornado<=4.4.2' \
   'bokeh'
 #  xarray
 
