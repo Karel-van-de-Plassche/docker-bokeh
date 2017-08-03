@@ -2,4 +2,5 @@
 exec /usr/local/bin/bokeh serve \
   --port $BOKEH_PORT \
   --log-level $BOKEH_LOG_LEVEL $BOKEH_APP_PATH \
-  --allow-websocket-origin $BOKEH_EXTERNAL_ADDRESS
+  --allow-websocket-origin $BOKEH_EXTERNAL_ADDRESS \
+  --prefix $BOKEH_PREFIX
