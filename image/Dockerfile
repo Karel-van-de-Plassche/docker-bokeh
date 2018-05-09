@@ -24,8 +24,10 @@ RUN apt-get update \
 RUN ln -s /usr/bin/pip3 /usr/bin/pip
 
 RUN pip install \
-  'bokeh'
-#  xarray
+  bokeh==0.12.7
+
+RUN pip install \
+  tornado==4.3
 
 # Add service directory to /container/service
 ADD service /container/service
