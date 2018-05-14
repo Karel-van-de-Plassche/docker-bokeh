@@ -38,3 +38,7 @@ RUN /container/tool/install-service
 
 # Add default env variables
 ADD environment /container/environment/99-default
+
+# Print bokeh version information
+RUN python3 -c "import tornado; print('tornado version=' + tornado.version)"
+RUN bokeh info
