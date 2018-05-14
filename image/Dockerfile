@@ -9,15 +9,9 @@ RUN apt-get update \
 #    vim \
 #    git \
 #    build-essential \
-    libyaml-dev \
-#    nodejs \
-#    npm \
+#    libyaml-dev \
     python3 \
     python3-pip \
-    python3-numpy \
-    python3-dev \
-#    python3-scipy \
-#    python3-pandas \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
