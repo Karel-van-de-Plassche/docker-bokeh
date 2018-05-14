@@ -21,7 +21,7 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN ln -s /usr/bin/pip3 /usr/bin/pip
+RUN pip3 install --upgrade pip
 
 RUN pip install \
   bokeh==0.12.7
